@@ -1,6 +1,6 @@
 {
   "name": "markdown-magic-scripts",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An extension to create a dashboard for scripts in package.json for markdown-magic",
   "main": "index.js",
   "scripts": {
