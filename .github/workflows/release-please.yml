@@ -24,19 +24,16 @@ jobs:
         uses: actions/checkout@v4
 
       # 1. Run the release-please action
-      # This action manages the version bump, CHANGELOG, and GitHub Release.
-      # It creates a release Pull Request (PR) when needed, and only runs the
-      # publish steps below when that PR is merged.
+      # Using the recommended 'googleapis/release-please-action'
       - name: Run Release Please
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: node
           target-branch: main
-        env:
-          # Explicitly pass the GITHUB_TOKEN to the action to ensure it has the 
-          # necessary 'contents: write' and 'pull-requests: write' permissions.
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Passing the GITHUB_TOKEN via the 'token' input for maximum reliability
+          # in creating Pull Requests (resolves the permission error).
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- Conditional Publishing Steps ---
       # 2. These steps only run IF a new release was successfully created (did_release is true)
@@ -55,8 +52,7 @@ jobs:
           echo "New release created: Publishing version ${{ steps.release.outputs.version }}"
           # Use npm ci for clean and fast dependency installation in CI environments
           npm ci
-          # Run the documentation generation script (docs) to ensure the package
-          # being published includes the up-to-date documentation content.
+          # Run the documentation generation script (docs)
           npm run docs
           # Run the fix script to ensure final code formatting and linting is applied
           npm run fix
