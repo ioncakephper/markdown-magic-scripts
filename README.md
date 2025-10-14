@@ -17,24 +17,26 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
-- [Features](#features)
-- [Available Options](#available-options)
-- [📖 Examples](#-examples)
-  - [Default (table)](#default-table)
-  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-  - [Compact List](#compact-list)
-- [🧩 Metadata](#-metadata)
-  - [`package.json` Example](#packagejson-example)
-  - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
-- [✅ Why Use This?](#-why-use-this)
-- [Directory Structure](#directory-structure)
-- [Available Scripts](#available-scripts)
-- [🤝 Contributing](#-contributing)
-  - [🧰 Setup](#-setup)
-  - [🧩 Adding New Scripts](#-adding-new-scripts)
-  - [🪄 Extending Transforms](#-extending-transforms)
-  - [✅ Pull Request Checklist](#-pull-request-checklist)
-- [📄 License](#-license)
+- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
+  - [Features](#features)
+  - [Table of Contents](#table-of-contents)
+  - [Available Options](#available-options)
+  - [📖 Examples](#-examples)
+    - [Default (table)](#default-table)
+    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+    - [Compact List](#compact-list)
+  - [🧩 Metadata](#-metadata)
+    - [`package.json` Example](#packagejson-example)
+    - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
+  - [✅ Why Use This?](#-why-use-this)
+  - [Directory Structure](#directory-structure)
+  - [Available Scripts](#available-scripts)
+  - [🤝 Contributing](#-contributing)
+    - [🧰 Setup](#-setup)
+    - [🧩 Adding New Scripts](#-adding-new-scripts)
+    - [🪄 Extending Transforms](#-extending-transforms)
+    - [✅ Pull Request Checklist](#-pull-request-checklist)
+  - [📄 License](#-license)
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Options
@@ -55,9 +57,6 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 | `showCommands` | boolean | true | show or hide the command column/text. Default: true |
 | `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
 <!-- prettier-ignore-end -->
-<!-- prettier-ignore-end -->
-<!-- prettier-ignore-end -->
-<!-- prettier-ignore-end -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ---
@@ -68,17 +67,7 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 
 ```html
 <!-- DOCUMENTATION_HEADER:START (SCRIPTS) -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `docs` | `md-magic` | Update automated documentation content in README.md | [46](./package.json#L46) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [51](./package.json#L51) |
-| `format` | `prettier --write .` | Format all source files | [49](./package.json#L49) |
-| `format:package` | `prettier --write package.json` | Format package.json | [50](./package.json#L50) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [47](./package.json#L47) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [48](./package.json#L48) |
-| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [52](./package.json#L52) |
-
-<!-- DOCUMENTATION_HEADER:END__ -->
+<!-- DOCUMENTATION_HEADER:END -->
 ```
 
 Produces:
@@ -94,16 +83,6 @@ Produces:
 
 ```html
 <!-- DOCUMENTATION_HEADER:START (SCRIPTS:format=list groupBy=category) -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `docs` | `md-magic` | Update automated documentation content in README.md | [46](./package.json#L46) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [51](./package.json#L51) |
-| `format` | `prettier --write .` | Format all source files | [49](./package.json#L49) |
-| `format:package` | `prettier --write package.json` | Format package.json | [50](./package.json#L50) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [47](./package.json#L47) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [48](./package.json#L48) |
-| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [52](./package.json#L52) |
-
 <!-- DOCUMENTATION_HEADER:END -->
 ```
 
@@ -131,15 +110,6 @@ Produces:
 
 ```html
 <!-- DOCUMENTATION_HEADER:START (SCRIPTS:format=list compact=true) -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `docs` | `md-magic` | Update automated documentation content in README.md | [46](./package.json#L46) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [51](./package.json#L51) |
-| `format` | `prettier --write .` | Format all source files | [49](./package.json#L49) |
-| `format:package` | `prettier --write package.json` | Format package.json | [50](./package.json#L50) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [47](./package.json#L47) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [48](./package.json#L48) |
-| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [52](./package.json#L52) |
 
 <!-- DOCUMENTATION_HEADER:END -->
 ```
