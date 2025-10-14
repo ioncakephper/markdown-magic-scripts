@@ -2,25 +2,13 @@
 
 > An extension to create a dashboard for scripts defined in your project's package.json file, powered by markdown-magic.
 
-## Features
-
-This package provides a dedicated and powerful `markdown-magic` transform for documenting your `package.json` scripts, offering a significant upgrade over basic script documentation.
-
-- **Flexible Output:** Generate a clean, easy-to-read table or a simple list of your scripts.
-- **Grouping:** Organize your scripts by category using metadata from your `package.json`, making it easier to navigate and understand your project's workflow.
-- **Sorting:** Automatically sort scripts alphabetically to maintain a consistent order.
-- **Line Numbers:** Display and link to the exact line number where each script is defined in your `package.json`, making it easy to locate and edit scripts.
-- **Command Display:** Choose to show or hide the full command for each script, allowing you to create a more compact or detailed view.
-- **Compact Mode:** In list view, you can choose to display only the script names for a more concise output.
-- **Highly Customizable:** With a wide range of options, you can tailor the output to perfectly match your project's documentation style.
-
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
 
 - [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
-  - [Features](#features)
   - [Table of Contents](#table-of-contents)
+  - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Available Options](#available-options)
@@ -40,7 +28,19 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
     - [🪄 Extending Transforms](#-extending-transforms)
     - [✅ Pull Request Checklist](#-pull-request-checklist)
   - [📄 License](#-license)
-  <!-- AUTO-GENERATED-CONTENT:END -->
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Features
+
+This package provides a dedicated and powerful `markdown-magic` transform for documenting your `package.json` scripts, offering a significant upgrade over basic script documentation.
+
+- **Flexible Output:** Generate a clean, easy-to-read table or a simple list of your scripts.
+- **Grouping:** Organize your scripts by category using metadata from your `package.json`, making it easier to navigate and understand your project's workflow.
+- **Sorting:** Automatically sort scripts alphabetically to maintain a consistent order.
+- **Line Numbers:** Display and link to the exact line number where each script is defined in your `package.json`, making it easy to locate and edit scripts.
+- **Command Display:** Choose to show or hide the full command for each script, allowing you to create a more compact or detailed view.
+- **Compact Mode:** In list view, you can choose to display only the script names for a more concise output.
+- **Highly Customizable:** With a wide range of options, you can tailor the output to perfectly match your project's documentation style.
 
 ## Installation
 
