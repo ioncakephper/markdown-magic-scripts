@@ -17,7 +17,10 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
+
 - [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Available Options](#available-options)
 - [📖 Examples](#-examples)
   - [Default (table)](#default-table)
@@ -36,6 +39,47 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
   - [✅ Pull Request Checklist](#-pull-request-checklist)
 - [📄 License](#-license)
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Installation
+
+Install the package and its peer dependencies:
+
+```bash
+npm install markdown-magic markdown-magic-scripts --save-dev
+```
+
+## Usage
+
+This package provides a `SCRIPTS` transform that you can use in your `markdown.config.js` file.
+
+First, add the transform to your `markdown.config.js`:
+
+```js
+// markdown.config.js
+export default {
+  transforms: {
+    SCRIPTS: require('markdown-magic-scripts'),
+  },
+};
+```
+
+Then, use the transform in your `README.md`:
+
+```markdown
+<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
+
+| Script           | Command                                                        | Description                                         | Line                     |
+| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | ------------------------ |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md | [48](./package.json#L48) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     | [53](./package.json#L53) |
+| `format`         | `prettier --write .`                                           | Format all source files                             | [51](./package.json#L51) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 | [52](./package.json#L52) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               | [49](./package.json#L49) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  | [50](./package.json#L50) |
+| `test`           | `echo "Error: no test specified" && exit 1`                    | Run tests                                           | [54](./package.json#L54) |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+```
 
 ## Available Options
 
@@ -148,6 +192,7 @@ If you prefer to use a different name for your metadata object instead of `scrip
 For example, if you want to use a `myScriptsInfo` object:
 
 **`package.json`:**
+
 ```json
 {
   "scripts": {
@@ -162,6 +207,7 @@ For example, if you want to use a `myScriptsInfo` object:
 ```
 
 **`README.md`:**
+
 ```html
 <!-- DOCUMENTATION_HEADER:START (SCRIPTS:metaKey=myScriptsInfo) -->
 <!-- DOCUMENTATION_HEADER:END -->
@@ -178,6 +224,7 @@ For example, if you want to use a `myScriptsInfo` object:
 ## Directory Structure
 
 <!-- AUTO-GENERATED-CONTENT:START (DIR_TREE) -->
+
 ```
 markdown-magic-scripts/
 ├─┬ .github/
@@ -197,20 +244,22 @@ markdown-magic-scripts/
 ├── package.json
 └── README.md
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Scripts
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `docs` | `md-magic` | Update automated documentation content in README.md | [46](./package.json#L46) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [51](./package.json#L51) |
-| `format` | `prettier --write .` | Format all source files | [49](./package.json#L49) |
-| `format:package` | `prettier --write package.json` | Format package.json | [50](./package.json#L50) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [47](./package.json#L47) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [48](./package.json#L48) |
-| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [52](./package.json#L52) |
+
+| Script           | Command                                                        | Description                                         | Line                     |
+| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | ------------------------ |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md | [48](./package.json#L48) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     | [53](./package.json#L53) |
+| `format`         | `prettier --write .`                                           | Format all source files                             | [51](./package.json#L51) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 | [52](./package.json#L52) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               | [49](./package.json#L49) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  | [50](./package.json#L50) |
+| `test`           | `echo "Error: no test specified" && exit 1`                    | Run tests                                           | [54](./package.json#L54) |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
