@@ -17,32 +17,30 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
-- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
-  - [Features](#features)
-  - [Table of Contents](#table-of-contents)
-  - [Available Options](#available-options)
-  - [📖 Examples](#-examples)
-    - [Default (table)](#default-table)
-    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-    - [Compact List](#compact-list)
-  - [🧩 Metadata](#-metadata)
-    - [`package.json` Example](#packagejson-example)
-    - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
-  - [✅ Why Use This?](#-why-use-this)
-  - [Directory Structure](#directory-structure)
-  - [Available Scripts](#available-scripts)
-  - [🤝 Contributing](#-contributing)
-    - [🧰 Setup](#-setup)
-    - [🧩 Adding New Scripts](#-adding-new-scripts)
-    - [🪄 Extending Transforms](#-extending-transforms)
-    - [✅ Pull Request Checklist](#-pull-request-checklist)
-  - [📄 License](#-license)
+- [Features](#features)
+- [Available Options](#available-options)
+- [📖 Examples](#-examples)
+  - [Default (table)](#default-table)
+  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+  - [Compact List](#compact-list)
+- [🧩 Metadata](#-metadata)
+  - [`package.json` Example](#packagejson-example)
+  - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
+- [✅ Why Use This?](#-why-use-this)
+- [Directory Structure](#directory-structure)
+- [Available Scripts](#available-scripts)
+- [🤝 Contributing](#-contributing)
+  - [🧰 Setup](#-setup)
+  - [🧩 Adding New Scripts](#-adding-new-scripts)
+  - [🪄 Extending Transforms](#-extending-transforms)
+  - [✅ Pull Request Checklist](#-pull-request-checklist)
+- [📄 License](#-license)
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Options
 
-<!-- AUTO-GENERATED-CONTENT:START (OPTIONS-DOCS) -->
 <!-- prettier-ignore-start -->
+<!-- AUTO-GENERATED-CONTENT:START (OPTIONS-DOCS) -->
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `baseUrl` | string | "./package.json" | base URL for line number links. Default: "./package.json" |
@@ -56,8 +54,8 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 | `metaKey` | string | "scriptsMeta" | name of the metadata object in package.json. Default: "scriptsMeta" |
 | `showCommands` | boolean | true | show or hide the command column/text. Default: true |
 | `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
-<!-- prettier-ignore-end -->
 <!-- AUTO-GENERATED-CONTENT:END -->
+<!-- prettier-ignore-end -->
 
 ---
 
@@ -110,7 +108,6 @@ Produces:
 
 ```html
 <!-- DOCUMENTATION_HEADER:START (SCRIPTS:format=list compact=true) -->
-
 <!-- DOCUMENTATION_HEADER:END -->
 ```
 
@@ -167,16 +164,6 @@ For example, if you want to use a `myScriptsInfo` object:
 **`README.md`:**
 ```html
 <!-- DOCUMENTATION_HEADER:START (SCRIPTS:metaKey=myScriptsInfo) -->
-| Script | Command | Line |
-| -------- | -------- | -------- |
-| `docs` | `md-magic` | [46](./package.json#L46) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | [51](./package.json#L51) |
-| `format` | `prettier --write .` | [49](./package.json#L49) |
-| `format:package` | `prettier --write package.json` | [50](./package.json#L50) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | [47](./package.json#L47) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | [48](./package.json#L48) |
-| `test` | `echo "Error: no test specified" && exit 1` | [52](./package.json#L52) |
-
 <!-- DOCUMENTATION_HEADER:END -->
 ```
 
