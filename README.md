@@ -18,27 +18,29 @@ This package provides a dedicated and powerful `markdown-magic` transform for do
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Available Options](#available-options)
-- [📖 Examples](#-examples)
-  - [Default (table)](#default-table)
-  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-  - [Compact List](#compact-list)
-- [🧩 Metadata](#-metadata)
-  - [`package.json` Example](#packagejson-example)
-  - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
-- [✅ Why Use This?](#-why-use-this)
-- [Directory Structure](#directory-structure)
-- [Available Scripts](#available-scripts)
-- [🤝 Contributing](#-contributing)
-  - [🧰 Setup](#-setup)
-  - [🧩 Adding New Scripts](#-adding-new-scripts)
-  - [🪄 Extending Transforms](#-extending-transforms)
-  - [✅ Pull Request Checklist](#-pull-request-checklist)
-- [📄 License](#-license)
-<!-- AUTO-GENERATED-CONTENT:END -->
+- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
+  - [Features](#features)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Available Options](#available-options)
+  - [📖 Examples](#-examples)
+    - [Default (table)](#default-table)
+    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+    - [Compact List](#compact-list)
+  - [🧩 Metadata](#-metadata)
+    - [`package.json` Example](#packagejson-example)
+    - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
+  - [✅ Why Use This?](#-why-use-this)
+  - [Directory Structure](#directory-structure)
+  - [Available Scripts](#available-scripts)
+  - [🤝 Contributing](#-contributing)
+    - [🧰 Setup](#-setup)
+    - [🧩 Adding New Scripts](#-adding-new-scripts)
+    - [🪄 Extending Transforms](#-extending-transforms)
+    - [✅ Pull Request Checklist](#-pull-request-checklist)
+  - [📄 License](#-license)
+  <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Installation
 
@@ -56,7 +58,7 @@ First, add the transform to your `markdown.config.js`:
 
 ```js
 // markdown.config.js
-export default {
+module.exports {
   transforms: {
     SCRIPTS: require('markdown-magic-scripts'),
   },
