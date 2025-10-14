@@ -6,57 +6,31 @@
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
 
-- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Example](#example)
-    - [`README.md` Snippet](#readmemd-snippet)
-  - [🛠 Options](#-options)
-    - [Available Options](#available-options)
-  - [📖 Examples](#-examples)
-    - [Default (table)](#default-table)
-    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-    - [dev](#dev)
-    - [docs](#docs)
-    - [Compact List](#compact-list)
-  - [🧩 Metadata](#-metadata)
-  - [✅ Why Use This?](#-why-use-this)
-  - [Directory Structure](#directory-structure)
-  - [Available Scripts](#available-scripts)
-  - [🤝 Contributing](#-contributing)
-    - [🧰 Setup](#-setup)
-    - [🧩 Adding New Scripts](#-adding-new-scripts)
-    - [🪄 Extending Transforms](#-extending-transforms)
-    - [✅ Pull Request Checklist](#-pull-request-checklist)
-  - [📄 License](#-license)
-
-## Installation
-
-This package is intended to be used as a development dependency in your project.
-
-```bash
-npm install --save-dev markdown-magic markdown-magic-scripts
-```
-
-## Usage
-
-To utilize this package, you need to configure it within your markdown-magic setup. It works by looking for a special comment block in your Markdown files (README.md recommended) and injecting a formatted table of scripts. The comment block looks like this:
-
-```markdown
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-
-| Script     | Command                                     | Description                                         | Line                     |
-| ---------- | ------------------------------------------- | --------------------------------------------------- | ------------------------ |
-| `docs`     | `md-magic`                                  | Update automated documentation content in README.md | [15](./package.json#L15) |
-| `fix`      | `npm run lint:fix && npm run format`        | Run lint:fix and format scripts                     | [19](./package.json#L19) |
-| `format`   | `prettier --write .`                        | Format all source files                             | [18](./package.json#L18) |
-| `lint`     | `eslint . --ext .js,.json,.yaml,.md`        | Lint all source files                               | [16](./package.json#L16) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix`  | Fix linting issues                                  | [17](./package.json#L17) |
-| `test`     | `echo "Error: no test specified" && exit 1` | Run tests                                           | [20](./package.json#L20) |
-
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example](#example)
+  - [`README.md` Snippet](#readmemd-snippet)
+- [🛠 Options](#-options)
+  - [Available Options](#available-options)
+- [📖 Examples](#-examples)
+  - [Default (table)](#default-table)
+  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+  - [dev](#dev)
+  - [docs](#docs)
+  - [Compact List](#compact-list)
+- [🧩 Metadata](#-metadata)
+- [✅ Why Use This?](#-why-use-this)
+- [Directory Structure](#directory-structure)
+- [Available Scripts](#available-scripts)
+- [🤝 Contributing](#-contributing)
+  - [🧰 Setup](#-setup)
+  - [🧩 Adding New Scripts](#-adding-new-scripts)
+  - [🪄 Extending Transforms](#-extending-transforms)
+  - [✅ Pull Request Checklist](#-pull-request-checklist)
+- [📄 License](#-license)
 <!-- AUTO-GENERATED-CONTENT:END -->
-```
+
+````
 
 The content between these tags will be automatically replaced with a table of scripts defined in your `package.json` under the `"scripts"` field, using metadata from the optional `"scriptsMeta"` field for descriptions.
 
@@ -91,7 +65,7 @@ const config = {
 markdownMagic(config);
 
 console.log('Documentation updated using markdown-magic-scripts!');
-```
+````
 
 ### `README.md` Snippet
 
@@ -101,6 +75,16 @@ Ensure your README.md includes the placeholder for the script dashboard:... [You
 ## Available Scripts
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
+
+| Script     | Command                                     | Description                                         | Line                     |
+| ---------- | ------------------------------------------- | --------------------------------------------------- | ------------------------ |
+| `docs`     | `md-magic`                                  | Update automated documentation content in README.md | [15](./package.json#L15) |
+| `fix`      | `npm run lint:fix && npm run format`        | Run lint:fix and format scripts                     | [19](./package.json#L19) |
+| `format`   | `prettier --write .`                        | Format all source files                             | [18](./package.json#L18) |
+| `lint`     | `eslint . --ext .js,.json,.yaml,.md`        | Lint all source files                               | [16](./package.json#L16) |
+| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix`  | Fix linting issues                                  | [17](./package.json#L17) |
+| `test`     | `echo "Error: no test specified" && exit 1` | Run tests                                           | [20](./package.json#L20) |
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ... [Rest of your README.md]
@@ -144,6 +128,8 @@ You can pass options inside the marker, e.g.:
 | `metaKey` | string | "scriptsMeta" | name of the metadata object in package.json. Default: "scriptsMeta" |
 | `showCommands` | boolean | true | show or hide the command column/text. Default: true |
 | `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
+<!-- prettier-ignore-end -->
+<!-- prettier-ignore-end -->
 <!-- prettier-ignore-end -->
 <!-- prettier-ignore-end -->
 <!-- prettier-ignore-end -->
@@ -281,6 +267,7 @@ markdown-magic-scripts/
 ├─┬ transforms/
 │ └── options-docs.js
 ├── .prettierrc.json
+├── CHANGELOG.md
 ├── eslint.config.js
 ├── index.js
 ├── LICENSE
