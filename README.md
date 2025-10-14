@@ -6,26 +6,48 @@
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
 
-- [`README.md` Snippet](#readmemd-snippet)
-- [🛠 Options](#-options)
-  - [Available Options](#available-options)
-- [📖 Examples](#-examples)
-  - [Default (table)](#default-table)
-  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-  - [dev](#dev)
-  - [docs](#docs)
-  - [Compact List](#compact-list)
-- [🧩 Metadata](#-metadata)
-- [✅ Why Use This?](#-why-use-this)
-- [Directory Structure](#directory-structure)
-- [Available Scripts](#available-scripts)
-- [🤝 Contributing](#-contributing)
-  - [🧰 Setup](#-setup)
-  - [🧩 Adding New Scripts](#-adding-new-scripts)
-  - [🪄 Extending Transforms](#-extending-transforms)
-  - [✅ Pull Request Checklist](#-pull-request-checklist)
-- [📄 License](#-license)
-<!-- AUTO-GENERATED-CONTENT:END -->
+- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [`README.md` Snippet](#readmemd-snippet)
+  - [🛠 Options](#-options)
+    - [Available Options](#available-options)
+  - [📖 Examples](#-examples)
+    - [Default (table)](#default-table)
+    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+    - [dev](#dev)
+    - [docs](#docs)
+    - [Compact List](#compact-list)
+  - [🧩 Metadata](#-metadata)
+  - [✅ Why Use This?](#-why-use-this)
+  - [Directory Structure](#directory-structure)
+  - [Available Scripts](#available-scripts)
+  - [🤝 Contributing](#-contributing)
+    - [🧰 Setup](#-setup)
+    - [🧩 Adding New Scripts](#-adding-new-scripts)
+    - [🪄 Extending Transforms](#-extending-transforms)
+    - [✅ Pull Request Checklist](#-pull-request-checklist)
+  - [📄 License](#-license)
+  <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Installation
+
+To use `markdown-magic-scripts`, you'll need to install it as a dev dependency in your project:
+
+```bash
+npm install --save-dev markdown-magic-scripts
+```
+
+You will also need to have `markdown-magic` installed. If you don't have it already, you can install it with:
+
+```bash
+npm install --save-dev markdown-magic
+```
+
+## Usage
+
+The primary way to use this tool is by creating a `markdown.config.js` file in your project root. This file will tell `markdown-magic` to use the `scripts` transform.
 
 ````
 
@@ -127,6 +149,7 @@ You can pass options inside the marker, e.g.:
 | `metaKey` | string | "scriptsMeta" | name of the metadata object in package.json. Default: "scriptsMeta" |
 | `showCommands` | boolean | true | show or hide the command column/text. Default: true |
 | `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
+<!-- prettier-ignore-end -->
 <!-- prettier-ignore-end -->
 <!-- prettier-ignore-end -->
 <!-- prettier-ignore-end -->
