@@ -28,6 +28,14 @@
   ],
   "author": "Ion Gireada",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "transforms/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "markdown.config.js"
+  ],
   "devDependencies": {
     "eslint": "^9.37.0",
     "eslint-plugin-json": "^4.0.1",
