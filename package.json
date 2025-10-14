@@ -7,6 +7,8 @@
     "markdown-magic-scripts",
     "markdown",
     "scripts",
+    "npm",
+    "package-scripts",
     "dashboard"
   ],
   "license": "MIT",
