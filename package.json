@@ -47,6 +47,7 @@
     "lint": "Lint all source files",
     "lint:fix": "Fix linting issues",
     "format": "Format all source files",
+    "format:package": "Format package.json",
     "fix": "Run lint:fix and format scripts",
     "test": "Run tests"
   }
