@@ -49,10 +49,8 @@ module.exports = function optionsDocsTransform(content, options, config) {
   );
 
   return [
-    '<!-- prettier-ignore-start -->',
     '| Option | Type | Default | Description |',
     '|--------|------|---------|-------------|',
     ...rows,
-    '<!-- prettier-ignore-end -->',
   ].join('\n');
 };

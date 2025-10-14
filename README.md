@@ -2,33 +2,45 @@
 
 > An extension to create a dashboard for scripts defined in your project's package.json file, powered by markdown-magic.
 
+## Features
+
+This package provides a dedicated and powerful `markdown-magic` transform for documenting your `package.json` scripts, offering a significant upgrade over basic script documentation.
+
+- **Flexible Output:** Generate a clean, easy-to-read table or a simple list of your scripts.
+- **Grouping:** Organize your scripts by category using metadata from your `package.json`, making it easier to navigate and understand your project's workflow.
+- **Sorting:** Automatically sort scripts alphabetically to maintain a consistent order.
+- **Line Numbers:** Display and link to the exact line number where each script is defined in your `package.json`, making it easy to locate and edit scripts.
+- **Command Display:** Choose to show or hide the full command for each script, allowing you to create a more compact or detailed view.
+- **Compact Mode:** In list view, you can choose to display only the script names for a more concise output.
+- **Highly Customizable:** With a wide range of options, you can tailor the output to perfectly match your project's documentation style.
+
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
-
-- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
-  - [Table of Contents](#table-of-contents)
-  - [Available Options](#available-options)
-  - [📖 Examples](#-examples)
-    - [Default (table)](#default-table)
-    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-    - [Compact List](#compact-list)
-  - [🧩 Metadata](#-metadata)
-  - [✅ Why Use This?](#-why-use-this)
-  - [Directory Structure](#directory-structure)
-  - [Available Scripts](#available-scripts)
-  - [🤝 Contributing](#-contributing)
-    - [🧰 Setup](#-setup)
-    - [🧩 Adding New Scripts](#-adding-new-scripts)
-    - [🪄 Extending Transforms](#-extending-transforms)
-    - [✅ Pull Request Checklist](#-pull-request-checklist)
-  - [📄 License](#-license)
-  <!-- AUTO-GENERATED-CONTENT:END -->
+- [Features](#features)
+- [Available Options](#available-options)
+- [📖 Examples](#-examples)
+  - [Default (table)](#default-table)
+  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+  - [Compact List](#compact-list)
+- [🧩 Metadata](#-metadata)
+  - [`package.json` Example](#packagejson-example)
+  - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
+- [✅ Why Use This?](#-why-use-this)
+- [Directory Structure](#directory-structure)
+- [Available Scripts](#available-scripts)
+- [🤝 Contributing](#-contributing)
+  - [🧰 Setup](#-setup)
+  - [🧩 Adding New Scripts](#-adding-new-scripts)
+  - [🪄 Extending Transforms](#-extending-transforms)
+  - [✅ Pull Request Checklist](#-pull-request-checklist)
+- [📄 License](#-license)
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Options
 
-<!-- AUTO-GENERATED-CONTENT:START (OPTIONS-DOCS) -->
 <!-- prettier-ignore-start -->
+<!-- AUTO-GENERATED-CONTENT:START (OPTIONS-DOCS) -->
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `baseUrl` | string | "./package.json" | base URL for line number links. Default: "./package.json" |
@@ -42,8 +54,8 @@
 | `metaKey` | string | "scriptsMeta" | name of the metadata object in package.json. Default: "scriptsMeta" |
 | `showCommands` | boolean | true | show or hide the command column/text. Default: true |
 | `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
-<!-- prettier-ignore-end -->
 <!-- AUTO-GENERATED-CONTENT:END -->
+<!-- prettier-ignore-end -->
 
 ---
 
@@ -52,8 +64,8 @@
 ### Default (table)
 
 ```html
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- DOCUMENTATION_HEADER:START (SCRIPTS) -->
+<!-- DOCUMENTATION_HEADER:END -->
 ```
 
 Produces:
@@ -68,8 +80,8 @@ Produces:
 ### Grouped by Category (list with fenced blocks)
 
 ```html
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:format=list groupBy=category) -->
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- DOCUMENTATION_HEADER:START (SCRIPTS:format=list groupBy=category) -->
+<!-- DOCUMENTATION_HEADER:END -->
 ```
 
 Produces:
@@ -95,8 +107,8 @@ Produces:
 ### Compact List
 
 ```html
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:format=list compact=true) -->
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- DOCUMENTATION_HEADER:START (SCRIPTS:format=list compact=true) -->
+<!-- DOCUMENTATION_HEADER:END -->
 ```
 
 Produces:
@@ -112,7 +124,9 @@ Produces:
 
 ## 🧩 Metadata
 
-You can enrich scripts with metadata in `package.json`:
+You can enrich your scripts with descriptions, categories, and other metadata by adding a `scriptsMeta` object to your `package.json`. This metadata is then used to generate a more detailed and organized script dashboard.
+
+### `package.json` Example
 
 ```json
 {
@@ -127,6 +141,32 @@ You can enrich scripts with metadata in `package.json`:
 }
 ```
 
+### Using a Custom Metadata Key
+
+If you prefer to use a different name for your metadata object instead of `scriptsMeta`, you can use the `metaKey` option in your `markdown-magic` comment.
+
+For example, if you want to use a `myScriptsInfo` object:
+
+**`package.json`:**
+```json
+{
+  "scripts": {
+    "lint": "eslint .",
+    "docs": "npx markdown-magic"
+  },
+  "myScriptsInfo": {
+    "lint": { "description": "Run ESLint", "category": "dev" },
+    "docs": { "description": "Generate docs", "category": "docs" }
+  }
+}
+```
+
+**`README.md`:**
+```html
+<!-- DOCUMENTATION_HEADER:START (SCRIPTS:metaKey=myScriptsInfo) -->
+<!-- DOCUMENTATION_HEADER:END -->
+```
+
 ---
 
 ## ✅ Why Use This?
@@ -138,7 +178,6 @@ You can enrich scripts with metadata in `package.json`:
 ## Directory Structure
 
 <!-- AUTO-GENERATED-CONTENT:START (DIR_TREE) -->
-
 ```
 markdown-magic-scripts/
 ├─┬ .github/
@@ -158,22 +197,20 @@ markdown-magic-scripts/
 ├── package.json
 └── README.md
 ```
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Scripts
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-
-| Script           | Command                                                        | Description                                         | Line                     |
-| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | ------------------------ |
-| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md | [46](./package.json#L46) |
-| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     | [51](./package.json#L51) |
-| `format`         | `prettier --write .`                                           | Format all source files                             | [49](./package.json#L49) |
-| `format:package` | `prettier --write package.json`                                | Format package.json                                 | [50](./package.json#L50) |
-| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               | [47](./package.json#L47) |
-| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  | [48](./package.json#L48) |
-| `test`           | `echo "Error: no test specified" && exit 1`                    | Run tests                                           | [52](./package.json#L52) |
+| Script | Command | Description | Line |
+| -------- | -------- | -------- | -------- |
+| `docs` | `md-magic` | Update automated documentation content in README.md | [46](./package.json#L46) |
+| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [51](./package.json#L51) |
+| `format` | `prettier --write .` | Format all source files | [49](./package.json#L49) |
+| `format:package` | `prettier --write package.json` | Format package.json | [50](./package.json#L50) |
+| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [47](./package.json#L47) |
+| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [48](./package.json#L48) |
+| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [52](./package.json#L52) |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -219,7 +256,7 @@ This project is licensed under the MIT License.
 ```
 MIT License
 
-Copyright (c) 2025 Ion
+Copyright (c) 2025 Ion Gireada
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
