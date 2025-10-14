@@ -28,7 +28,7 @@ const path = require('path');
  * <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:format=list groupBy=category) -->
  * <!-- AUTO-GENERATED-CONTENT:END -->
  */
-module.exports = function scriptsTransform(content, options = {}, config) {
+module.exports = function scriptsTransform(content, options = {}, _config) {
   const pkgPath = path.join(process.cwd(), 'package.json');
   const pkgRaw = fs.readFileSync(pkgPath, 'utf8');
   const pkg = JSON.parse(pkgRaw);
