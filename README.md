@@ -5,6 +5,7 @@
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
+
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -64,20 +65,15 @@ module.exports {
 
 Then, use the transform in your `README.md`:
 
-```markdown
-<!-- AUTO-GENERATED-CONTENT:START (FILE:src=sample_magic_scripts.md -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `docs` | `md-magic` | Update automated documentation content in README.md | [48](./package.json#L48) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [53](./package.json#L53) |
-| `format` | `prettier --write .` | Format all source files | [51](./package.json#L51) |
-| `format:package` | `prettier --write package.json` | Format package.json | [52](./package.json#L52) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [49](./package.json#L49) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [50](./package.json#L50) |
-| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [54](./package.json#L54) |
+<!-- AUTO-GENERATED-CONTENT:START (FILE:src=./samples/sample_magic_scripts.md) -->
+<!-- The below content is automatically added from ./samples/sample_magic_scripts.md -->
 
+```html
+<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 ```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Options
 
@@ -105,10 +101,15 @@ Then, use the transform in your `README.md`:
 
 ### Default (table)
 
+<!--AUTO-GENERATED-CONTENT:START (FILE:src=./samples/sample_magic_scripts.md)-->
+<!-- The below content is automatically added from ./samples/sample_magic_scripts.md -->
+
 ```html
-<!-- DOCUMENTATION_HEADER:START (SCRIPTS) -->
-<!-- DOCUMENTATION_HEADER:END -->
+<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
+<!-- AUTO-GENERATED-CONTENT:END -->
 ```
+
+<!--AUTO-GENERATED-CONTENT:END-->
 
 Produces:
 
@@ -121,10 +122,15 @@ Produces:
 
 ### Grouped by Category (list with fenced blocks)
 
+<!-- AUTO-GENERATED-CONTENT:START (FILE:src=./samples/sample_magic_scripts_with_list.md) -->
+<!-- The below content is automatically added from ./samples/sample_magic_scripts_with_list.md -->
+
 ```html
-<!-- DOCUMENTATION_HEADER:START (SCRIPTS:format=list groupBy=category) -->
-<!-- DOCUMENTATION_HEADER:END -->
+<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:format=list&groupBy=category) -->
+<!-- AUTO-GENERATED-CONTENT:END -->
 ```
+
+<!-- AUTO-GENERATED-CONTENT:END -->
 
 Produces:
 
@@ -222,12 +228,16 @@ For example, if you want to use a `myScriptsInfo` object:
 ## Directory Structure
 
 <!-- AUTO-GENERATED-CONTENT:START (DIR_TREE) -->
+
 ```
 markdown-magic-scripts/
 ├─┬ .github/
 │ └─┬ workflows/
 │   └── release-please.yml
 ├── .qodo/
+├─┬ samples/
+│ ├── sample_magic_scripts_with_list.md
+│ └── sample_magic_scripts.md
 ├─┬ transforms/
 │ └── options-docs.js
 ├── .npmcheckrc
@@ -241,20 +251,22 @@ markdown-magic-scripts/
 ├── package.json
 └── README.md
 ```
+
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Available Scripts
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-| Script | Command | Description | Line |
-| -------- | -------- | -------- | -------- |
-| `docs` | `md-magic` | Update automated documentation content in README.md | [48](./package.json#L48) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts | [53](./package.json#L53) |
-| `format` | `prettier --write .` | Format all source files | [51](./package.json#L51) |
-| `format:package` | `prettier --write package.json` | Format package.json | [52](./package.json#L52) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files | [49](./package.json#L49) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues | [50](./package.json#L50) |
-| `test` | `echo "Error: no test specified" && exit 1` | Run tests | [54](./package.json#L54) |
+
+| Script           | Command                                                        | Description                                         | Line                     |
+| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | ------------------------ |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md | [48](./package.json#L48) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     | [53](./package.json#L53) |
+| `format`         | `prettier --write .`                                           | Format all source files                             | [51](./package.json#L51) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 | [52](./package.json#L52) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               | [49](./package.json#L49) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  | [50](./package.json#L50) |
+| `test`           | `echo "Error: no test specified" && exit 1`                    | Run tests                                           | [54](./package.json#L54) |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
