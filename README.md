@@ -65,7 +65,7 @@ module.exports {
 Then, use the transform in your `README.md`:
 
 ```markdown
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
+<!-- AUTO-GENERATED-CONTENT:START (FILE:src=sample_auto_scripts.md -->
 | Script | Command | Description | Line |
 | -------- | -------- | -------- | -------- |
 | `docs` | `md-magic` | Update automated documentation content in README.md | [48](./package.json#L48) |
