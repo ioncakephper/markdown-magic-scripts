@@ -2,11 +2,10 @@
 
 ## [1.2.0](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.1.0...v1.2.0) (2025-10-15)
 
-
 ### Features
 
-* **scripts:** add flexible options parsing and Jest test suite ([4c4ff7e](https://github.com/ioncakephper/markdown-magic-scripts/commit/4c4ff7e79f4d331cc63f228970f2ef91762744d7))
-* **scripts:** add flexible options parsing and Jest test suite ([b84838f](https://github.com/ioncakephper/markdown-magic-scripts/commit/b84838ffffbfb00b1f35c4b5d3c1692ab35bbf7f))
+- **scripts:** add flexible options parsing and Jest test suite ([4c4ff7e](https://github.com/ioncakephper/markdown-magic-scripts/commit/4c4ff7e79f4d331cc63f228970f2ef91762744d7))
+- **scripts:** add flexible options parsing and Jest test suite ([b84838f](https://github.com/ioncakephper/markdown-magic-scripts/commit/b84838ffffbfb00b1f35c4b5d3c1692ab35bbf7f))
 
 ## [1.1.0](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.0.0...v1.1.0) (2025-10-14)
 

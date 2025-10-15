@@ -17,6 +17,9 @@
 - [🧩 Metadata](#-metadata)
   - [`package.json` Example](#packagejson-example)
   - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
+- [🛠️ Providing Options to `markdown-magic-scripts`](#-providing-options-to-markdown-magic-scripts)
+  - [1. 📄 Inline Comment Markup](#1--inline-comment-markup)
+  - [2. ⚙️ Via `markdown-magic.config.js`](#2--via-markdown-magicconfigjs)
 - [✅ Why Use This?](#-why-use-this)
 - [Directory Structure](#directory-structure)
 - [Available Scripts](#available-scripts)
@@ -219,6 +222,54 @@ For example, if you want to use a `myScriptsInfo` object:
 
 ---
 
+## 🛠️ Providing Options to `markdown-magic-scripts`
+
+You can configure the transform using inline comment markup or via `markdown-magic.config.js`.
+
+### 1. 📄 Inline Comment Markup
+
+Use the `AUTO-GENERATED-CONTENT` block with options passed as a JSON object inside the parentheses:
+
+```md
+<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:{"scripts":["build", "test", "lint"]}) -->
+
+| Script           | Command                                                        | Description                                         | Category | Line                     |
+| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | -------- | ------------------------ |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [61](./package.json#L61) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [66](./package.json#L66) |
+| `format`         | `prettier --write .`                                           | Format all source files                             |          | [64](./package.json#L64) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [65](./package.json#L65) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [62](./package.json#L62) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [63](./package.json#L63) |
+| `test`           | `jest`                                                         | Run tests                                           | dev      | [44](./package.json#L44) |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+```
+
+This will run the specified scripts in order. You can also include a `separator` if your transform supports parsing string-based input.
+
+### 2. ⚙️ Via `markdown-magic.config.js`
+
+You can define global options for the transform like this:
+
+```js
+const scriptTransform = require('markdown-magic-scripts');
+
+module.exports = {
+  transforms: {
+    SCRIPTS: scriptTransform,
+  },
+  options: {
+    SCRIPTS: {
+      scripts: ['build', 'test', 'lint'],
+      separator: '|', // optional
+    },
+  },
+};
+```
+
+> 🧠 Note: Inline options passed in the comment block will override the config options. This allows for flexible, per-block customization while maintaining global defaults.
+
 ## ✅ Why Use This?
 
 - Keeps your README **always in sync** with your scripts.
@@ -262,13 +313,13 @@ markdown-magic-scripts/
 
 | Script           | Command                                                        | Description                                         | Category | Line                     |
 | ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | -------- | ------------------------ |
-| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [57](./package.json#L57) |
-| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [62](./package.json#L62) |
-| `format`         | `prettier --write .`                                           | Format all source files                             |          | [60](./package.json#L60) |
-| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [61](./package.json#L61) |
-| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [58](./package.json#L58) |
-| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [59](./package.json#L59) |
-| `test`           | `jest`                                                         | Run tests                                           | dev      | [40](./package.json#L40) |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [61](./package.json#L61) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [66](./package.json#L66) |
+| `format`         | `prettier --write .`                                           | Format all source files                             |          | [64](./package.json#L64) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [65](./package.json#L65) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [62](./package.json#L62) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [63](./package.json#L63) |
+| `test`           | `jest`                                                         | Run tests                                           | dev      | [44](./package.json#L44) |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
