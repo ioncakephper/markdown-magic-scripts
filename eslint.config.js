@@ -52,4 +52,21 @@ module.exports = [
       parser: markdownParser,
     },
   },
+
+  {
+    files: ['tests/**/*.js'],
+    languageOptions: {
+      globals: {
+        // Tell ESLint that Jest globals exist
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+      },
+    },
+  },
 ];

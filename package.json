@@ -29,13 +29,17 @@
     "format:package": "prettier --write package.json",
     "lint": "eslint . --ext .js,.json,.yaml,.md",
     "lint:fix": "eslint . --ext .js,.json,.yaml,.md --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "dependencies": {
+    "querystring": "^0.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "eslint": "^9.37.0",
     "eslint-plugin-json": "^4.0.1",
     "eslint-plugin-yaml": "^1.1.3",
+    "jest": "^30.2.0",
     "jsonc-eslint-parser": "^2.4.1",
     "markdown-eslint-parser": "^1.2.1",
     "markdown-magic": "2.6.1",
@@ -51,6 +55,9 @@
     "format": "Format all source files",
     "format:package": "Format package.json",
     "fix": "Run lint:fix and format scripts",
-    "test": "Run tests"
+    "test": {
+      "description": "Run tests",
+      "category": "dev"
+    }
   }
 }

@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = function optionsDocsTransform(content, options, config) {
+module.exports = function optionsDocsTransform(content, options, _) {
   const file = path.join(process.cwd(), 'index.js');
   const src = fs.readFileSync(file, 'utf8');
 

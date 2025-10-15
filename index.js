@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const querystring = require('querystring');
 
 /**
  * markdown-magic-scripts
@@ -28,7 +29,16 @@ const path = require('path');
  * <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:format=list groupBy=category) -->
  * <!-- AUTO-GENERATED-CONTENT:END -->
  */
-module.exports = function scriptsTransform(content, options = {}, _config) {
+module.exports = function scriptsTransform(content, options = {}, _) {
+  // Normalize options: accept object, JSON string, or querystring string
+  if (typeof options === 'string') {
+    try {
+      options = JSON.parse(options);
+    } catch (e) {
+      options = querystring.parse(options);
+    }
+  }
+
   const pkgPath = path.join(process.cwd(), 'package.json');
   const pkgRaw = fs.readFileSync(pkgPath, 'utf8');
   const pkg = JSON.parse(pkgRaw);
