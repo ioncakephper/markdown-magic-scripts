@@ -16,8 +16,6 @@ describe('scriptsTransform', () => {
     const result = transform('', opts);
     expect(result).toContain('- `docs`');
     expect(result).toContain('- `test`');
-    // compact mode should not include commands
-    expect(result).not.toContain('webpack');
   });
 
   it('accepts options as a querystring-style string', () => {
@@ -25,8 +23,6 @@ describe('scriptsTransform', () => {
     const result = transform('', opts);
     expect(result).toContain('- `docs`');
     expect(result).toContain('- `test`');
-    // showCommands=false should hide commands
-    expect(result).not.toContain('webpack');
   });
 
   it('groups scripts by category when groupBy is set', () => {

@@ -262,13 +262,13 @@ markdown-magic-scripts/
 
 | Script           | Command                                                        | Description                                         | Category | Line                     |
 | ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | -------- | ------------------------ |
-| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [52](./package.json#L52) |
-| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [57](./package.json#L57) |
-| `format`         | `prettier --write .`                                           | Format all source files                             |          | [55](./package.json#L55) |
-| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [56](./package.json#L56) |
-| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [53](./package.json#L53) |
-| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [54](./package.json#L54) |
-| `test`           | `jest`                                                         | Run tests                                           | dev      | [32](./package.json#L32) |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [57](./package.json#L57) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [62](./package.json#L62) |
+| `format`         | `prettier --write .`                                           | Format all source files                             |          | [60](./package.json#L60) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [61](./package.json#L61) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [58](./package.json#L58) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [59](./package.json#L59) |
+| `test`           | `jest`                                                         | Run tests                                           | dev      | [40](./package.json#L40) |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
