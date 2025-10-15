@@ -2,10 +2,9 @@
 
 ## [1.2.1](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.2.0...v1.2.1) (2025-10-15)
 
-
 ### Bug Fixes
 
-* remove unused defPart variable ([44b5e90](https://github.com/ioncakephper/markdown-magic-scripts/commit/44b5e90be01701ae2b5ab1cf0421e1b28a7231c4))
+- remove unused defPart variable ([44b5e90](https://github.com/ioncakephper/markdown-magic-scripts/commit/44b5e90be01701ae2b5ab1cf0421e1b28a7231c4))
 
 ## [1.2.0](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.1.0...v1.2.0) (2025-10-15)
 

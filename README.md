@@ -4,42 +4,35 @@
 
 ## Table of Contents
 
-<!-- AUTO-GENERATED-CONTENT:START (TOC) -->
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Available Options](#available-options)
-- [📖 Examples](#-examples)
+<!-- doc-gen TOC -->
+- [📖 Examples](#examples)
   - [Default (table)](#default-table)
   - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
   - [Compact List](#compact-list)
-- [🧩 Metadata](#-metadata)
+- [🧩 Metadata](#metadata)
   - [`package.json` Example](#packagejson-example)
   - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
-- [🛠️ Providing Options to `markdown-magic-scripts`](#-providing-options-to-markdown-magic-scripts)
+- [🛠️ Providing Options to `markdown-magic-scripts`](#providing-options-to-markdown-magic-scripts)
   - [1. 📄 Inline Comment Markup](#1--inline-comment-markup)
   - [2. ⚙️ Via `markdown-magic.config.js`](#2--via-markdown-magicconfigjs)
-- [✅ Why Use This?](#-why-use-this)
+- [Scripts Transformer Options](#scripts-transformer-options)
+- [✅ Why Use This?](#why-use-this)
 - [Directory Structure](#directory-structure)
 - [Available Scripts](#available-scripts)
-- [🤝 Contributing](#-contributing)
-  - [🧰 Setup](#-setup)
-  - [🧩 Adding New Scripts](#-adding-new-scripts)
-  - [🪄 Extending Transforms](#-extending-transforms)
-  - [✅ Pull Request Checklist](#-pull-request-checklist)
-- [📄 License](#-license)
-  <!-- AUTO-GENERATED-CONTENT:END -->
-  <!-- prettier-ignore-end -->
-
----
+- [🤝 Contributing](#contributing)
+  - [🧰 Setup](#setup)
+  - [🧩 Adding New Scripts](#adding-new-scripts)
+  - [🪄 Extending Transforms](#extending-transforms)
+  - [✅ Pull Request Checklist](#pull-request-checklist)
+- [📄 License](#license)
+<!-- end-doc-gen -->
 
 ## 📖 Examples
 
 ### Default (table)
 
 ```html
-<!-- DOCUMENTATION-CONTENT:START (SCRIPTS) -->
+<!-- DOCUMENTATION-CONTENT:START SCRIPTS -->
 <!-- DOCUMENTATION-CONTENT:END -->
 ```
 
@@ -55,7 +48,7 @@ Produces:
 ### Grouped by Category (list with fenced blocks)
 
 ```html
-<!-- DOCUMENTATION-CONTENT:START (SCRIPTS:format=list&groupBy=category) -->
+<!-- DOCUMENTATION-CONTENT:START SCRIPTS format=list groupBy=category -->
 <!-- DOCUMENTATION-CONTENT:END -->
 ```
 
@@ -82,7 +75,7 @@ Produces:
 ### Compact List
 
 ```html
-<!-- DOCUMENTATION-CONTENT:START (SCRIPTS:format=list compact=true) -->
+<!-- DOCUMENTATION-CONTENT:START SCRIPTS format=list compact=true -->
 <!-- DOCUMENTATION-CONTENT:END -->
 ```
 
@@ -140,7 +133,7 @@ For example, if you want to use a `myScriptsInfo` object:
 **`README.md`:**
 
 ```html
-<!-- DOCUMENTATION-CONTENT:START (SCRIPTS:metaKey=myScriptsInfo) -->
+<!-- DOCUMENTATION-CONTENT:START SCRIPTS metaKey=myScriptsInfo -->
 <!-- DOCUMENTATION-CONTENT:END -->
 ```
 
@@ -152,10 +145,10 @@ You can configure the transform using inline comment markup or via `markdown-mag
 
 ### 1. 📄 Inline Comment Markup
 
-Use the `AUTO-GENERATED-CONTENT` block with options passed as a JSON object inside the parentheses:
+Use the `doc-gen ... end-doc-gen` block with options passed as a JSON object inside the parentheses:
 
 ```html
-<!-- DOCUMENTATION-CONTENT:START (SCRIPTS:{"format":"table"}) -->
+<!-- DOCUMENTATION-CONTENT:START SCRIPTS format:table}) -->
 <!-- DOCUMENTATION-CONTENT:END -->
 ```
 
@@ -182,6 +175,24 @@ module.exports = {
 
 > 🧠 Note: Inline options passed in the comment block will override the config options. This allows for flexible, per-block customization while maintaining global defaults.
 
+## Scripts Transformer Options
+
+<!-- doc-gen OPTIONS -->
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `baseUrl` | string | "./package.json" | base URL for line number links. Default: "./package.json" |
+| `commandBlock` | boolean |  | in list mode, show commands in fenced code blocks (true) or inline (false). |
+| `commandLang` | string | "bash" | language for fenced code blocks. Default: "bash" |
+| `compact` | boolean | false | in list mode, only show script names. Default: false |
+| `format` | string |  | output format: "table" (default) or "list" |
+| `groupBy` | string|null | null | group scripts by a metadata field (e.g. "category"). Default: null |
+| `lineNumbers` | boolean | true | show the line number where each script is defined. Default: true |
+| `linkLineNumbers` | boolean | true | make line numbers clickable links. Default: true |
+| `metaKey` | string | "scriptsMeta" | name of the metadata object in package.json. Default: "scriptsMeta" |
+| `showCommands` | boolean | true | show or hide the command column/text. Default: true |
+| `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
+<!-- end-doc-gen -->
+
 ## ✅ Why Use This?
 
 - Keeps your README **always in sync** with your scripts.
@@ -190,48 +201,38 @@ module.exports = {
 
 ## Directory Structure
 
-<!-- AUTO-GENERATED-CONTENT:START (DIR_TREE) -->
-
+<!-- doc-gen fileTree -->
 ```
-markdown-magic-scripts/
-├─┬ .github/
-│ └─┬ workflows/
-│   └── release-please.yml
-├── .qodo/
-├─┬ tests/
-│ └── scriptsTransform.test.js
-├─┬ transforms/
-│ └── options-docs.js
-├── .npmcheckrc
-├── .prettierrc.json
-├── CHANGELOG.md
-├── eslint.config.js
-├── index.js
-├── LICENSE
-├── markdown.config.js
-├── package-lock.json
-├── package.json
-├── README-bck.md
-└── README.md
+└── markdown-magic-scripts/
+    ├── tests/
+    │   └── scriptsTransform.test.js
+    ├── transforms/
+    │   └── options-docs.js
+    ├── .prettierrc.json
+    ├── CHANGELOG.md
+    ├── eslint.config.js
+    ├── index.js
+    ├── LICENSE
+    ├── markdown-magic.config.js
+    ├── package-lock.json
+    ├── package.json
+    └── README.md
 ```
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- end-doc-gen -->
 
 ## Available Scripts
 
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
-
-| Script           | Command                                                        | Description                                         | Category | Line                     |
-| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | -------- | ------------------------ |
-| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [67](./package.json#L67) |
-| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [72](./package.json#L72) |
-| `format`         | `prettier --write .`                                           | Format all source files                             |          | [70](./package.json#L70) |
-| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [71](./package.json#L71) |
-| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [68](./package.json#L68) |
-| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [69](./package.json#L69) |
-| `test`           | `jest`                                                         | Run tests                                           | dev      | [50](./package.json#L50) |
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- doc-gen SCRIPTS -->
+| Script | Command | Description | Category | Line |
+| -------- | -------- | -------- | -------- | -------- |
+| `docs` | `npx markdown-magic README.md --config ./markdown-magic.config.js` | Update automated documentation content in README.md |  | [65](./package.json#L65) |
+| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts |  | [70](./package.json#L70) |
+| `format` | `prettier --write .` | Format all source files |  | [68](./package.json#L68) |
+| `format:package` | `prettier --write package.json` | Format package.json |  | [69](./package.json#L69) |
+| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files |  | [66](./package.json#L66) |
+| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues |  | [67](./package.json#L67) |
+| `test` | `jest` | Run tests | dev | [50](./package.json#L50) |
+<!-- end-doc-gen -->
 
 ## 🤝 Contributing
 
