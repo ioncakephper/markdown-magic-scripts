@@ -29,7 +29,8 @@ const querystring = require('querystring');
  * <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:format=list groupBy=category) -->
  * <!-- AUTO-GENERATED-CONTENT:END -->
  */
-module.exports = function scriptsTransform(content, options = {}, _) {
+module.exports = function scriptsTransform(config = {}) {
+  let { options = {} } = config;
   // Normalize options: accept object, JSON string, or querystring string
   if (typeof options === 'string') {
     try {
