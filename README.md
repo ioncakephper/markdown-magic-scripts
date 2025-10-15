@@ -6,30 +6,32 @@
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Available Options](#available-options)
-- [📖 Examples](#-examples)
-  - [Default (table)](#default-table)
-  - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
-  - [Compact List](#compact-list)
-- [🧩 Metadata](#-metadata)
-  - [`package.json` Example](#packagejson-example)
-  - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
-- [🛠️ Providing Options to `markdown-magic-scripts`](#-providing-options-to-markdown-magic-scripts)
-  - [1. 📄 Inline Comment Markup](#1--inline-comment-markup)
-  - [2. ⚙️ Via `markdown-magic.config.js`](#2--via-markdown-magicconfigjs)
-- [✅ Why Use This?](#-why-use-this)
-- [Directory Structure](#directory-structure)
-- [Available Scripts](#available-scripts)
-- [🤝 Contributing](#-contributing)
-  - [🧰 Setup](#-setup)
-  - [🧩 Adding New Scripts](#-adding-new-scripts)
-  - [🪄 Extending Transforms](#-extending-transforms)
-  - [✅ Pull Request Checklist](#-pull-request-checklist)
-- [📄 License](#-license)
-<!-- AUTO-GENERATED-CONTENT:END -->
+- [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Available Options](#available-options)
+  - [📖 Examples](#-examples)
+    - [Default (table)](#default-table)
+    - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
+    - [Compact List](#compact-list)
+  - [🧩 Metadata](#-metadata)
+    - [`package.json` Example](#packagejson-example)
+    - [Using a Custom Metadata Key](#using-a-custom-metadata-key)
+  - [🛠️ Providing Options to `markdown-magic-scripts`](#️-providing-options-to-markdown-magic-scripts)
+    - [1. 📄 Inline Comment Markup](#1--inline-comment-markup)
+    - [2. ⚙️ Via `markdown-magic.config.js`](#2-️-via-markdown-magicconfigjs)
+  - [✅ Why Use This?](#-why-use-this)
+  - [Directory Structure](#directory-structure)
+  - [Available Scripts](#available-scripts)
+  - [🤝 Contributing](#-contributing)
+    - [🧰 Setup](#-setup)
+    - [🧩 Adding New Scripts](#-adding-new-scripts)
+    - [🪄 Extending Transforms](#-extending-transforms)
+    - [✅ Pull Request Checklist](#-pull-request-checklist)
+  - [📄 License](#-license)
+  <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Features
 
@@ -231,18 +233,7 @@ You can configure the transform using inline comment markup or via `markdown-mag
 Use the `AUTO-GENERATED-CONTENT` block with options passed as a JSON object inside the parentheses:
 
 ```md
-<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:{"scripts":["build", "test", "lint"]}) -->
-
-| Script           | Command                                                        | Description                                         | Category | Line                     |
-| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | -------- | ------------------------ |
-| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [61](./package.json#L61) |
-| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [66](./package.json#L66) |
-| `format`         | `prettier --write .`                                           | Format all source files                             |          | [64](./package.json#L64) |
-| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [65](./package.json#L65) |
-| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [62](./package.json#L62) |
-| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [63](./package.json#L63) |
-| `test`           | `jest`                                                         | Run tests                                           | dev      | [44](./package.json#L44) |
-
+<!-- AUTO-GENERATED-CONTENT:START (SCRIPTS:{"format":"table"}) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 ```
 
@@ -261,8 +252,7 @@ module.exports = {
   },
   options: {
     SCRIPTS: {
-      scripts: ['build', 'test', 'lint'],
-      separator: '|', // optional
+      format: 'table',
     },
   },
 };
