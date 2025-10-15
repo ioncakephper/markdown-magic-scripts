@@ -11,6 +11,14 @@
     "package-scripts",
     "dashboard"
   ],
+  "homepage": "https://github.com/ioncakephper/markdown-magic-scripts#readme",
+  "bugs": {
+    "url": "https://github.com/ioncakephper/markdown-magic-scripts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioncakephper/markdown-magic-scripts.git"
+  },
   "license": "MIT",
   "author": "Ion Gireada",
   "main": "index.js",
@@ -30,9 +38,6 @@
     "lint": "eslint . --ext .js,.json,.yaml,.md",
     "lint:fix": "eslint . --ext .js,.json,.yaml,.md --fix",
     "test": "jest"
-  },
-  "dependencies": {
-    "querystring": "^0.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
