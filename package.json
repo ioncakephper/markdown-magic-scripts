@@ -9,7 +9,10 @@
     "scripts",
     "npm",
     "package-scripts",
-    "dashboard"
+    "dashboard",
+    "project-automation",
+    "npm-scripts",
+    "markdown-dashboard"
   ],
   "homepage": "https://github.com/ioncakephper/markdown-magic-scripts#readme",
   "bugs": {
