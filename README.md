@@ -238,6 +238,8 @@ markdown-magic-scripts/
 ├─┬ samples/
 │ ├── sample_magic_scripts_with_list.md
 │ └── sample_magic_scripts.md
+├─┬ tests/
+│ └── scriptsTransform.test.js
 ├─┬ transforms/
 │ └── options-docs.js
 ├── .npmcheckrc
@@ -258,15 +260,15 @@ markdown-magic-scripts/
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
 
-| Script           | Command                                                        | Description                                         | Line                     |
-| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | ------------------------ |
-| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md | [48](./package.json#L48) |
-| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     | [53](./package.json#L53) |
-| `format`         | `prettier --write .`                                           | Format all source files                             | [51](./package.json#L51) |
-| `format:package` | `prettier --write package.json`                                | Format package.json                                 | [52](./package.json#L52) |
-| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               | [49](./package.json#L49) |
-| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  | [50](./package.json#L50) |
-| `test`           | `echo "Error: no test specified" && exit 1`                    | Run tests                                           | [54](./package.json#L54) |
+| Script           | Command                                                        | Description                                         | Category | Line                     |
+| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- | -------- | ------------------------ |
+| `docs`           | `md-magic`                                                     | Update automated documentation content in README.md |          | [52](./package.json#L52) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts                     |          | [57](./package.json#L57) |
+| `format`         | `prettier --write .`                                           | Format all source files                             |          | [55](./package.json#L55) |
+| `format:package` | `prettier --write package.json`                                | Format package.json                                 |          | [56](./package.json#L56) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                           | Lint all source files                               |          | [53](./package.json#L53) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                     | Fix linting issues                                  |          | [54](./package.json#L54) |
+| `test`           | `jest`                                                         | Run tests                                           | dev      | [32](./package.json#L32) |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
