@@ -5,7 +5,6 @@
 ## Table of Contents
 
 <!-- AUTO-GENERATED-CONTENT:START (TOC) -->
-
 - [📦 markdown‑magic‑scripts](#-markdownmagicscripts)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
@@ -31,7 +30,6 @@
     - [🪄 Extending Transforms](#-extending-transforms)
     - [✅ Pull Request Checklist](#-pull-request-checklist)
   - [📄 License](#-license)
-  <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Features
 
