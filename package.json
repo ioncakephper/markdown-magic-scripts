@@ -1,7 +1,7 @@
 {
   "name": "markdown-magic-scripts",
   "version": "1.2.0",
-  "description": "An extension to create a dashboard for scripts in package.json for markdown-magic",
+  "description": "Automatically generate a dynamic, customizable dashboard of your npm scripts in your README.md using this markdown-magic transform. Keep your project documentation in sync with your package.json.",
   "keywords": [
     "markdown-magic",
     "markdown-magic-scripts",
@@ -13,7 +13,13 @@
     "project-automation",
     "npm-scripts",
     "markdown-dashboard",
-    "automation"
+    "automation",
+    "markdown-automation",
+    "documentation-generator",
+    "json-scripts",
+    "script-documentation",
+    "readme-generator",
+    "developer-tools"
   ],
   "homepage": "https://github.com/ioncakephper/markdown-magic-scripts#readme",
   "bugs": {
