@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.2.1...v1.3.0) (2025-10-15)
+
+
+### Features
+
+* **markdown:** add markdown-magic v3 compatibility ([5de280d](https://github.com/ioncakephper/markdown-magic-scripts/commit/5de280d072fc95061e7b09a32088fe0aca6f85e6))
+* **markdown:** add markdown-magic v3 compatibility ([7f83b89](https://github.com/ioncakephper/markdown-magic-scripts/commit/7f83b89f3fb020e5a2459255fcdcf576303fe777))
+
 ## [1.2.1](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.2.0...v1.2.1) (2025-10-15)
 
 ### Bug Fixes
