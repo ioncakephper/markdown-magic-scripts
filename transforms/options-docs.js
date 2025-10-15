@@ -25,7 +25,7 @@ module.exports = function optionsDocsTransform(content, options, _) {
   const opts = lines.map((line) => {
     const [head, ...rest] = line.split(':');
     const desc = rest.join(':').trim();
-    const [nameType, defPart] = head.split(')').map((s) => s.trim());
+    const [nameType] = head.split(')').map((s) => s.trim());
     const [name, typeRaw] = nameType.split('(');
     const type = typeRaw || '';
     const defMatch = desc.match(/Default:\s*([^\s]+)/i);
