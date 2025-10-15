@@ -12,7 +12,8 @@
     "dashboard",
     "project-automation",
     "npm-scripts",
-    "markdown-dashboard"
+    "markdown-dashboard",
+    "automation"
   ],
   "homepage": "https://github.com/ioncakephper/markdown-magic-scripts#readme",
   "bugs": {
