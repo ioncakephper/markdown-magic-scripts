@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.3.0...v1.4.0) (2025-10-16)
+
+
+### Features
+
+* **scripts:** add prep script for publishing workflow ([2c52d43](https://github.com/ioncakephper/markdown-magic-scripts/commit/2c52d43d506bac462dd42294ad5a17dba1f102d1))
+
 ## [1.3.0](https://github.com/ioncakephper/markdown-magic-scripts/compare/v1.2.1...v1.3.0) (2025-10-15)
 
 ### Features
