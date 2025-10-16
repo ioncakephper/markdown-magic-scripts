@@ -5,6 +5,7 @@
 ## Table of Contents
 
 <!-- doc-gen TOC -->
+
 - [📖 Examples](#examples)
   - [Default (table)](#default-table)
   - [Grouped by Category (list with fenced blocks)](#grouped-by-category-list-with-fenced-blocks)
@@ -178,19 +179,21 @@ module.exports = {
 ## Scripts Transformer Options
 
 <!-- doc-gen OPTIONS -->
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `baseUrl` | string | "./package.json" | base URL for line number links. Default: "./package.json" |
-| `commandBlock` | boolean |  | in list mode, show commands in fenced code blocks (true) or inline (false). |
-| `commandLang` | string | "bash" | language for fenced code blocks. Default: "bash" |
-| `compact` | boolean | false | in list mode, only show script names. Default: false |
-| `format` | string |  | output format: "table" (default) or "list" |
-| `groupBy` | string|null | null | group scripts by a metadata field (e.g. "category"). Default: null |
-| `lineNumbers` | boolean | true | show the line number where each script is defined. Default: true |
-| `linkLineNumbers` | boolean | true | make line numbers clickable links. Default: true |
-| `metaKey` | string | "scriptsMeta" | name of the metadata object in package.json. Default: "scriptsMeta" |
-| `showCommands` | boolean | true | show or hide the command column/text. Default: true |
-| `sort` | boolean | true | whether to sort scripts alphabetically. Default: true |
+
+| Option            | Type    | Default          | Description                                                                 |
+| ----------------- | ------- | ---------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `baseUrl`         | string  | "./package.json" | base URL for line number links. Default: "./package.json"                   |
+| `commandBlock`    | boolean |                  | in list mode, show commands in fenced code blocks (true) or inline (false). |
+| `commandLang`     | string  | "bash"           | language for fenced code blocks. Default: "bash"                            |
+| `compact`         | boolean | false            | in list mode, only show script names. Default: false                        |
+| `format`          | string  |                  | output format: "table" (default) or "list"                                  |
+| `groupBy`         | string  | null             | null                                                                        | group scripts by a metadata field (e.g. "category"). Default: null |
+| `lineNumbers`     | boolean | true             | show the line number where each script is defined. Default: true            |
+| `linkLineNumbers` | boolean | true             | make line numbers clickable links. Default: true                            |
+| `metaKey`         | string  | "scriptsMeta"    | name of the metadata object in package.json. Default: "scriptsMeta"         |
+| `showCommands`    | boolean | true             | show or hide the command column/text. Default: true                         |
+| `sort`            | boolean | true             | whether to sort scripts alphabetically. Default: true                       |
+
 <!-- end-doc-gen -->
 
 ## ✅ Why Use This?
@@ -202,6 +205,7 @@ module.exports = {
 ## Directory Structure
 
 <!-- doc-gen fileTree -->
+
 ```
 └── markdown-magic-scripts/
     ├── tests/
@@ -218,20 +222,24 @@ module.exports = {
     ├── package.json
     └── README.md
 ```
+
 <!-- end-doc-gen -->
 
 ## Available Scripts
 
 <!-- doc-gen SCRIPTS -->
-| Script | Command | Description | Category | Line |
-| -------- | -------- | -------- | -------- | -------- |
-| `docs` | `npx markdown-magic README.md --config ./markdown-magic.config.js` | Update automated documentation content in README.md |  | [65](./package.json#L65) |
-| `fix` | `npm run lint:fix && npm run format && npm run format:package` | Run lint:fix and format scripts |  | [70](./package.json#L70) |
-| `format` | `prettier --write .` | Format all source files |  | [68](./package.json#L68) |
-| `format:package` | `prettier --write package.json` | Format package.json |  | [69](./package.json#L69) |
-| `lint` | `eslint . --ext .js,.json,.yaml,.md` | Lint all source files |  | [66](./package.json#L66) |
-| `lint:fix` | `eslint . --ext .js,.json,.yaml,.md --fix` | Fix linting issues |  | [67](./package.json#L67) |
-| `test` | `jest` | Run tests | dev | [50](./package.json#L50) |
+
+| Script           | Command                                                            | Description                                                               | Category | Line                     |
+| ---------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------- | -------- | ------------------------ |
+| `docs`           | `npx markdown-magic README.md --config ./markdown-magic.config.js` | Update automated documentation content in README.md                       |          | [66](./package.json#L66) |
+| `fix`            | `npm run lint:fix && npm run format && npm run format:package`     | Run lint:fix and format scripts                                           |          | [71](./package.json#L71) |
+| `format`         | `prettier --write .`                                               | Format all source files                                                   |          | [69](./package.json#L69) |
+| `format:package` | `prettier --write package.json`                                    | Format package.json                                                       |          | [70](./package.json#L70) |
+| `lint`           | `eslint . --ext .js,.json,.yaml,.md`                               | Lint all source files                                                     |          | [67](./package.json#L67) |
+| `lint:fix`       | `eslint . --ext .js,.json,.yaml,.md --fix`                         | Fix linting issues                                                        |          | [68](./package.json#L68) |
+| `prep`           | `npm run docs && npm run fix`                                      | Prepare the package for publishing by updating docs and fixing formatting |          | [76](./package.json#L76) |
+| `test`           | `jest`                                                             | Run tests                                                                 | dev      | [51](./package.json#L51) |
+
 <!-- end-doc-gen -->
 
 ## 🤝 Contributing

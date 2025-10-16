@@ -47,6 +47,7 @@
     "format:package": "prettier --write package.json",
     "lint": "eslint . --ext .js,.json,.yaml,.md",
     "lint:fix": "eslint . --ext .js,.json,.yaml,.md --fix",
+    "prep": "npm run docs && npm run fix",
     "test": "jest"
   },
   "devDependencies": {
@@ -71,6 +72,7 @@
     "test": {
       "description": "Run tests",
       "category": "dev"
-    }
+    },
+    "prep": "Prepare the package for publishing by updating docs and fixing formatting"
   }
 }
